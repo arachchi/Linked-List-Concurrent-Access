@@ -13,7 +13,7 @@ class LinkedList {
 public:
 
     boolean Delete(long value,Node* head);
-    void Insert(long value, Node* head);
+    boolean Insert(long value, Node* head);
     boolean Member(int value,Node* head);
 
 };

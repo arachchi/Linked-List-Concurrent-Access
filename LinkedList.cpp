@@ -26,7 +26,7 @@ boolean Delete(long value,Node* head){
         return false;
 }
 
-void Insert(long value,Node* head){
+boolean Insert(long value,Node* head){
     Node* current_p = head;
     Node* predecessor_p = NULL;
     Node* node = new Node();
@@ -43,7 +43,9 @@ void Insert(long value,Node* head){
     if(current_p == NULL || current_p->getValue()>value){
         node->setNext(current_p);
         predecessor_p->setNext(node);
-    }
+        return true;
+    }else
+        return false;
 }
 
 boolean Member(int value,Node* head){
