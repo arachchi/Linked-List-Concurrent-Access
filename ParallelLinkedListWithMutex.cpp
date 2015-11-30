@@ -57,37 +57,25 @@ void *calculation(void *arg){
             i++;
     }
     //creating m operation
-    i=0;
-
     clock_t begin= clock();
-    while(i<mMember) {
+    for (i = 0; i < m; ++i)
+    {
+        float operation = rand();
         randomValue = rand() % (n * 100);
-
-        pthread_mutex_lock(mutex_p);
-        condition = list->Insert(randomValue, head);
-        pthread_mutex_unlock(mutex_p);
-        if (condition) i++;
-    }
-    i=0;
-    while(i<mInsert) {
-        randomValue = rand() % (n * 100);
-
-        pthread_mutex_lock(mutex_p);
-        condition = list->Member(randomValue, head);
-        pthread_mutex_unlock(mutex_p);
-        if (condition) i++;
-    }
-    i=0;
-    while(i<mDelete){
-        randomValue = rand() % (n * 100);
-
-        pthread_mutex_lock(mutex_p);
-        condition=list->Delete(randomValue,head);
-        pthread_mutex_unlock(mutex_p);
-        if(condition) i++;
-
+        if(operation<=mMember){
+            pthread_mutex_lock(mutex_p);
+            list->Member(randomValue, head);
+            pthread_mutex_unlock(mutex_p);
+        }else if(operation<=mMember+mInsert){
+            pthread_mutex_lock(mutex_p);
+            list->Insert(randomValue, head);
+            pthread_mutex_unlock(mutex_p);
+        }else{
+            pthread_mutex_lock(mutex_p);
+            list->Delete(randomValue,head);
+            pthread_mutex_unlock(mutex_p);
         }
-    
+    }  
     clock_t end = clock();
     double elapsed_time = double(end-begin)/CLOCKS_PER_SEC;
 

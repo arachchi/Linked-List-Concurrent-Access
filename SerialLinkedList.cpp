@@ -28,16 +28,28 @@ int main() {
     //creating m operation
     i=0;
     clock_t begin= clock();
+        for (i = 0; i < m; ++i)
+    {
+        float operation = rand();
+        randomValue = rand() % (n * 100);
+        if(operation<=mMember){
+            list->Member(randomValue, head);
+        }else if(operation<=mMember+mInsert){
+            list->Insert(randomValue,head);
+        }else{
+            list->Delete(randomValue,head);
+        }
+    }  
     while(i<m){
         int  randomOperation= rand()%3;
         randomValue = rand()%(n*100);
         switch (randomOperation){
             case 0:
-                condition=list->Insert(randomValue,head);
+                condition=
                 if(condition) i++;
                 break;
             case 1:
-                condition=list->Member(randomValue,head);
+                
                 if(condition) i++;
                 break;
             case 2:
