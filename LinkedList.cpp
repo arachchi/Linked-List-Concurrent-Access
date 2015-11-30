@@ -4,18 +4,18 @@
 #include <iostream>
 #include "LinkedList.h"
 
-boolean Delete(long value,Node* head){
+boolean LinkedList::Delete(long value,Node* head){
     Node* current_p = head;
     Node* predecessor_p = NULL;
     if(head==NULL)
         return false;
     else
-        while(current_p !=NULL && current_p->getValue()<value){
+        while((current_p !=NULL) && current_p->getValue()<value){
             predecessor_p=current_p;
             current_p=current_p->getNext();
         }
 
-    if(current_p != NULL && current_p->getValue() == value){
+    if((current_p != NULL) && current_p->getValue() == value){
         if(predecessor_p == NULL){
             head->setNext(current_p->getNext());
         }else{
@@ -26,7 +26,7 @@ boolean Delete(long value,Node* head){
         return false;
 }
 
-boolean Insert(long value,Node* head){
+boolean LinkedList::Insert(long value,Node* head){
     Node* current_p = head;
     Node* predecessor_p = NULL;
     Node* node = new Node();
@@ -35,12 +35,12 @@ boolean Insert(long value,Node* head){
     if(head==NULL)
         head = node;
     else
-        while(current_p != NULL && current_p->getValue()<value){
+        while((current_p != NULL) && current_p->getValue()<value){
             predecessor_p = current_p;
             current_p = current_p->getNext();
         }
 
-    if(current_p == NULL || current_p->getValue()>value){
+    if((current_p == NULL) || current_p->getValue()>value){
         node->setNext(current_p);
         predecessor_p->setNext(node);
         return true;
@@ -48,13 +48,13 @@ boolean Insert(long value,Node* head){
         return false;
 }
 
-boolean Member(int value,Node* head){
+boolean LinkedList::Member(int value, Node *head) {
     Node* iterator = head;
 
     if(head==NULL)
         return false;
     else
-        while(iterator != NULL & iterator->getValue()<value){
+        while((iterator != NULL) && iterator->getValue()<value){
             iterator = iterator->getNext();
         }
 

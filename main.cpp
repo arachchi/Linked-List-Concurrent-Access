@@ -20,7 +20,7 @@ int main() {
 
 void serialProgram(int n,int m){
     Node* head = new Node();
-    LinkedList* list = new LinkedList()
+    LinkedList* list = new LinkedList();
     int i=0;
     long randomValue;
 
@@ -57,7 +57,6 @@ void parallelProgramWithOneMutex(int n, int m){
     LinkedList* list = new LinkedList();
 
     pthread_mutex_t* mutex_p = new pthread_mutex_t();
-    const pthread_mutexattr_t* attr_t = new pthread_mutexattr_t();
 
     int i=0;
     long randomValue;
@@ -97,7 +96,6 @@ void parallelProgramWithOneMutex(int n, int m){
 
 }
 void parallelProgramWithReadWriteLocks(int n, int m){
-    Node* head = new Node();
-    LinkedList* list = new LinkedList();
+    cout<< "parallel Program implementation";
 
 }
