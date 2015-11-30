@@ -76,6 +76,7 @@ void *calculation(void *arg){
             pthread_mutex_unlock(mutex_p);
         }
     }  
+
     clock_t end = clock();
     double elapsed_time = double(end-begin)/CLOCKS_PER_SEC;
 
