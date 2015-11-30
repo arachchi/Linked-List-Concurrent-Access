@@ -87,7 +87,7 @@ void *calculation(void *arg){
         if(condition) i++;
 
         }
-    
+
     clock_t end = clock();
     double elapsed_time = double(end-begin)/CLOCKS_PER_SEC;
 
