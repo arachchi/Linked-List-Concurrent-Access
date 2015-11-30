@@ -7,6 +7,12 @@
       <sourceFolder url="file://$MODULE_DIR$/LinkedList.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Node.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Node.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ParallelLinkedListWithMutex.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ParallelLinkedListWithMutex.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ParallelLinkedListWithReadersWritersLock.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ParallelLinkedListWithReadersWritersLock.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SerialLinkedList.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SerialLinkedList.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/main.cpp" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
